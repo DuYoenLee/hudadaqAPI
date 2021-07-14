@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="APIMap">
+ 
+    <select id="getMethod" parameterType="Map" resultType="Map">
+        SELECT 
+        	seq,
+        	method_id
+        FROM hudadaq_api_method
+        WHERE method_id = #{method}
+    </select>
+    
+    <select id="getRequest" parameterType="Map" resultType="Map">
+        select 
+			* 
+		from hudadaq_api_request
+		where method_seq = #{seq}
+    </select>
+    
+    <select id="getResponse" parameterType="Map" resultType="Map">
+        select 
+			* 
+		from hudadaq_api_response
+		where method_seq = #{seq}
+    </select>
+    
+</mapper>

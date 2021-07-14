@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+	function fn_goAPI(){
+/* 		$.ajax({
+		    url: "http://localhost:8080/api", // 클라이언트가 요청을 보낼 서버의 URL 주소
+		    data: { method : "chkLoginID",
+		    		loginID : "test" 
+		    			
+		    		},                // HTTP 요청과 함께 서버로 보낼 데이터
+		    type: "Post",           // HTTP 요청 방식(GET, POST)
+		    dataType: "json"                         // 서버에서 보내줄 데이터의 타입
+
+		})
+ */		
+ 		/* alert("호출");
+		$.ajax({
+			url: "/api",
+			type: "POST",
+			dataType: "json",
+			data: { method : "chkLoginID",
+	    		loginID : "test" 
+	    			
+	    		},
+			success: function(data){
+				alert("success : " + data);
+			},
+			
+			error: function (request, status, error){        
+				alert("error : " + error);
+			}
+		
+		}); */
+	}
+</script>
+
+</head>
+<body>
+	<button value="submit" onclick="fn_goAPI();">submit</button>
+</body>
+</html>
